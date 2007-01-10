@@ -3,7 +3,7 @@ Title: Experimental Data Package: harbChIP
 Version: 0.0.1
 Author: VJ Carey
 Description: Data Package automatically created on Fri Dec  1 09:47:22 2006.
-Maintainer: VJ Carey, <stvjc@channing.harvard.edu>
+Maintainer: VJ Carey <stvjc@channing.harvard.edu>
 Depends: Biobase
 License:  The Artistic License, Version 2.0
 biocViews: ExperimentData
