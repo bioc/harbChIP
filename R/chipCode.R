@@ -25,9 +25,9 @@
 
 #myhep = "GGCGCTA"
 #countPattern( myhep, getUpstream("YAL001C", sceUpstr)[[1]] )
-chkAllUS = function(patt, upstr) {
- orfs = keys(sceUpstr)
- allu = lapply( orfs, function(x) getUpstream(x, sceUpstr)[[1]] )
+chkAllUS = function(patt, upstr, struc=sceUpstr) {
+ orfs = keys(struc)
+ allu = lapply( orfs, function(x) getUpstream(x, struc)[[1]] )
  names(allu) = orfs
  occ = sapply(allu, function(x) countPattern(patt, x))
  names(occ) = orfs
