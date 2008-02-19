@@ -1,0 +1,7 @@
+exportClasses("upstreamSeqs")
+exportMethods("show", "keys", "seqs",
+   "organism", "Nmers")
+export("chkAllUS", "chkMotif4TF", "getUpstream",
+   "allhex", "buildUpstreamSeqs2")
+
+
