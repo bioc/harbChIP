@@ -28,7 +28,7 @@ setMethod("Nmers", c("numeric", "character", "upstreamSeqs"), function(n, orf, u
  if (length(orf)>1) stop("need single orf name")
  if (length(n)>1) stop("n must be numeric length 1")
  bs = getUpstream(orf, usobj)[[1]]
- views(bs, start=1:(Biostrings::nchar(bs)-n+1), end=6:(Biostrings::nchar(bs)))
+ views(bs, start=1:(Biostrings::nchar(bs)-n+1), end=n:(Biostrings::nchar(bs)))
 })
  
 allhex = function(orf, usobj) Nmers(6, orf, usobj)
