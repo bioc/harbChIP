@@ -1,5 +1,6 @@
 Package: harbChIP
 Title: Experimental Data Package: harbChIP
+Description: data from a yeast ChIP-chip experiment
 Version: 0.0.3
 Author: VJ Carey
 Maintainer: VJ Carey <stvjc@channing.harvard.edu>
