@@ -1,0 +1,66 @@
+
+
+%\VignetteDepends{harbChIP}
+%\VignetteIndexEntry{upstream sequence management for yeast}
+%\VignetteKeywords{yeast, sequence analysis}
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath,pstricks,fullpage}
+\usepackage[authoryear,round]{natbib}
+\usepackage{hyperref}
+\usepackage{theorem}
+\usepackage{float}
+\usepackage{ifthen}
+
+\newcommand{\scscst}{\scriptscriptstyle}
+\newcommand{\scst}{\scriptstyle}
+
+\newcommand{\R}{{\textsf{R}}}
+\newcommand{\code}[1]{{\texttt{#1}}}
+\newcommand{\term}[1]{{\emph{#1}}}
+\newcommand{\Rpackage}[1]{\textsf{#1}}
+\newcommand{\Rfunction}[1]{\texttt{#1}}
+\newcommand{\Robject}[1]{\texttt{#1}}
+\newcommand{\Rclass}[1]{{\textit{#1}}}
+\newcommand{\Rmethod}[1]{{\textit{#1}}}
+\newcommand{\Rfunarg}[1]{{\textit{#1}}}
+
+\begin{document}
+
+\title{The sceUpstr support in package harbChIP}
+\author{HJB/VJC}
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+The intent of this package is to allow code like the following:
+<<introChunk>>=
+library(harbChIP)
+data(sceUpstr)
+sceUpstr
+getUpstream("YAL001C", sceUpstr)
+@
+
+\section{Building the sceUpstr object}
+
+Upstream sequences of length 500bp were obtained from the SGD website:\\
+\texttt{www.yeastgenome.org -> Download Data -> FTP}\\
+\texttt{sequence/genomic\_sequence/orf\_dna/archive/utr5\_sc\_500.20040206.fasta.gz}
+
+<<buildUpstream500,eval=FALSE>>=
+fname = system.file("extdata/utr5_sc_500_20040206.fasta", package="sceUpstr")
+utr5 = readFASTA(fname)
+sceUpstr = buildUpstreamSeqs2(utr5)
+save(sceUpstr, file="sceUpstr.rda")
+@
+
+\section{Checking a finding of Harbison et al.}
+
+It is asserted in Fig 1 B of the paper that GGCGCTA is specifically bound by Snt2.
+We will examine the frequency of this heptamer in upstream regions and relate to the
+binding ratio distribution.
+
+\end{document}

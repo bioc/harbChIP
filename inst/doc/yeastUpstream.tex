@@ -1,0 +1,45 @@
+
+
+%\VignetteDepends{harbChIP}
+%\VignetteIndexEntry{upstream sequence management for yeast}
+%\VignetteKeywords{yeast, sequence analysis}
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath,pstricks,fullpage}
+\usepackage[authoryear,round]{natbib}
+\usepackage{hyperref}
+\usepackage{theorem}
+\usepackage{float}
+\usepackage{ifthen}
+
+\newcommand{\scscst}{\scriptscriptstyle}
+\newcommand{\scst}{\scriptstyle}
+
+\newcommand{\R}{{\textsf{R}}}
+\newcommand{\code}[1]{{\texttt{#1}}}
+\newcommand{\term}[1]{{\emph{#1}}}
+\newcommand{\Rpackage}[1]{\textsf{#1}}
+\newcommand{\Rfunction}[1]{\texttt{#1}}
+\newcommand{\Robject}[1]{\texttt{#1}}
+\newcommand{\Rclass}[1]{{\textit{#1}}}
+\newcommand{\Rmethod}[1]{{\textit{#1}}}
+\newcommand{\Rfunarg}[1]{{\textit{#1}}}
+
+\usepackage{/Users/stvjc/Work/ExternalSoft/R-devel/share/texmf/Sweave}
+\begin{document}
+
+\title{The sceUpstr support in package harbChIP}
+\author{HJB/VJC}
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+
+The intent of this package is to allow code like the following:
+\begin{Schunk}
+\begin{Sinput}
+> library(harbChIP)
+> data(sceUpstr)
+> sceUpstr
