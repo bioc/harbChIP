@@ -1,3 +1,6 @@
+import(methods)
+import(tools)
+
 exportClasses("upstreamSeqs")
 exportMethods("show", "keys", "seqs",
    "organism", "Nmers")
