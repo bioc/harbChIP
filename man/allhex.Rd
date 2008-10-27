@@ -10,10 +10,10 @@ allhex(orf, usobj)
   \item{usobj}{ upstreamSeqs object}
 }
 \details{
-computes Biostrings views
+computes Biostrings Views
 }
 \value{
-computes Biostrings views
+computes Biostrings Views
 }
 %\references{  }
 \author{Vince Carey <stvjc@channing.harvard.edu>}

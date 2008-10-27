@@ -8,7 +8,7 @@
 #library(Biostrings)
 
 #us1 = getUpstream("YAL001C", sceUpstr)[[1]]
-#hus1 = views(us1, start=1:495, end=6:500)
+#hus1 = Views(us1, start=1:495, end=6:500)
 #hus1
 #sort(table(as.character(hus1)), decr=TRUE)[1:8]
 
