@@ -16,7 +16,7 @@ computes Biostrings Views
 computes Biostrings Views
 }
 %\references{  }
-\author{Vince Carey <stvjc@channing.harvard.edu>}
+\author{Vince Carey \email{stvjc@channing.harvard.edu}}
 %\note{  }
 
 

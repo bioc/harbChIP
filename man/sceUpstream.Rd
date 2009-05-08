@@ -11,12 +11,8 @@ environment-based S4 object with DNAstring elements
 \value{
 environment-based S4 object with DNAstring elements
 }
-\references{  }
-\author{Vince Carey <stvjc@channing.harvard.edu>}
-%\note{  }
-%
-%
-%\seealso{  }
+
+\author{Vince Carey \email{stvjc@channing.harvard.edu}}
 
 \examples{
 data(sceUpstr)

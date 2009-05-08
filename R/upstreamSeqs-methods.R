@@ -24,11 +24,13 @@ getUpstream = function (orfs, upstrob)
 }
 
 setGeneric("Nmers", function(n, orf, usobj) standardGeneric("Nmers"))
-setMethod("Nmers", c("numeric", "character", "upstreamSeqs"), function(n, orf, usobj) {
+setMethod("Nmers", c("numeric", "character", "upstreamSeqs"), function(n, orf,
+usobj) { 
  if (length(orf)>1) stop("need single orf name")
  if (length(n)>1) stop("n must be numeric length 1")
  bs = getUpstream(orf, usobj)[[1]]
- Views(bs, start=1:(Biostrings::nchar(bs)-n+1), end=n:(Biostrings::nchar(bs)))
+ ## Views(bs, start=1:(Biostrings::nchar(bs)-n+1),
+ ## end=n:(Biostrings::nchar(bs)))  }) 
+ Views(bs, start=1:(nchar(bs)-n+1), end=n:(nchar(bs)))
 })
- 
 allhex = function(orf, usobj) Nmers(6, orf, usobj)
