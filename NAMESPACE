@@ -1,5 +1,5 @@
 import(methods)
-import(tools)
+import(stats)
 
 exportClasses("upstreamSeqs")
 exportMethods("show", "keys", "seqs",
