@@ -1,10 +1,10 @@
 Package: harbChIP
 Title: Experimental Data Package: harbChIP
 Description: data from a yeast ChIP-chip experiment
-Version: 1.0.0
+Version: 1.0.1
 Author: VJ Carey
 Maintainer: VJ Carey <stvjc@channing.harvard.edu>
-Depends: R (>= 2.6.0), tools, utils, IRanges, Biobase, Biostrings
+Depends: R (>= 2.6.0), tools, utils, IRanges, Biobase (>= 2.5.5), Biostrings
 Imports: methods, stats
 License:  The Artistic License, Version 2.0
 biocViews: ExperimentData, Yeast, ChIPchip
