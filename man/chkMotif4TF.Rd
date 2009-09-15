@@ -22,7 +22,7 @@ declare TF 'bound' to the upstream region}
 'present' in upstream region}
 }
 \details{
-Uses \code{\link[Biostrings]{countPattern}} to perform 
+Uses \code{\link[Biostrings:matchPattern]{countPattern}} to perform 
 motif count.
 }
 \value{a list with elements \code{call}, \code{table},
