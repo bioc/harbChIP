@@ -13,7 +13,7 @@
 \alias{seqs}
 
 \title{Class "upstreamSeqs" }
-\description{	 container for a collection of upstream sequences }
+\description{Container for a collection of upstream sequences }
 \section{Objects from the Class}{
 Objects can be created by calls of the form \code{new("upstreamSeqs", ...)}.
 Environments are used to store collections of DNAstrings.
@@ -38,16 +38,7 @@ all subsequences of length n as view elements of a DNA string }
     \item{show}{\code{signature(object = "upstreamSeqs")}: ... }
 	 }
 }
-%\references{ ~put references to the literature/web site here ~ }
-\author{ ~~who you are~~ }
-%\note{ ~~further notes~~ }
-
-% ~Make other sections like Warning with \section{Warning }{....} ~
-%
-%\seealso{
-%	~~objects to See Also as \code{\link{~~fun~~}}, ~~~
-%	or \code{\linkS4class{CLASSNAME}} for links to other classes
-%}
+\author{Vince Carey \email{stvjc@channing.harvard.edu}}
 \examples{
 showClass("upstreamSeqs")
 data(sceUpstr)
