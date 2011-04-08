@@ -26,7 +26,7 @@
 \newcommand{\Rmethod}[1]{{\textit{#1}}}
 \newcommand{\Rfunarg}[1]{{\textit{#1}}}
 
-\usepackage{/Users/stvjc/Work/ExternalSoft/R27/share/texmf/Sweave}
+\usepackage{/Users/stvjc/ExternalSoft/R-devel/share/texmf/Sweave}
 \begin{document}
 
 \title{The sceUpstr support in package harbChIP}
@@ -52,33 +52,3 @@ first keys:
 \end{Soutput}
 \begin{Sinput}
 > getUpstream("YAL001C", sceUpstr)
-\end{Sinput}
-\begin{Soutput}
-$YAL001C
-  500-letter "DNAString" instance
-Value: CTGTACCACTATAATAATTTATCTTGATCGTATTA...GACGTTTGGTTGAAGCCAACTAGCCACAAGAAAA
-\end{Soutput}
-\end{Schunk}
-
-\section{Building the sceUpstr object}
-
-Upstream sequences of length 500bp were obtained from the SGD website:\\
-\texttt{www.yeastgenome.org -> Download Data -> FTP}\\
-\texttt{sequence/genomic\_sequence/orf\_dna/archive/utr5\_sc\_500.20040206.fasta.gz}
-
-\begin{Schunk}
-\begin{Sinput}
-> fname = system.file("extdata/utr5_sc_500_20040206.fasta", package = "sceUpstr")
-> utr5 = readFASTA(fname)
-> sceUpstr = buildUpstreamSeqs2(utr5)
-> save(sceUpstr, file = "sceUpstr.rda")
-\end{Sinput}
-\end{Schunk}
-
-\section{Checking a finding of Harbison et al.}
-
-It is asserted in Fig 1 B of the paper that GGCGCTA is specifically bound by Snt2.
-We will examine the frequency of this heptamer in upstream regions and relate to the
-binding ratio distribution.
-
-\end{document}
